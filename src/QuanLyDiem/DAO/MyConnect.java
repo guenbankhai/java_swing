@@ -6,7 +6,7 @@ import com.microsoft.sqlserver.jdbc.SQLServerDriver;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Properties;
-import QuanLyDiem.GUI.LoadingDialog;
+import QuanLyDiem.GUI.DialogLoading;
 
 public class MyConnect {
 
@@ -16,7 +16,7 @@ public class MyConnect {
     private String userName = "sa";
     private String password = "123123";
 
-    public MyConnect(LoadingDialog loadingDialog) {
+    public MyConnect(DialogLoading loadingDialog) {
         String strConnect = "jdbc:sqlserver://" + severName + ";databaseName=" + dbName + ";useUnicode=true;characterEncoding=utf-8;trustServerCertificate=true";
         Properties pro = new Properties();
         pro.put("user", userName);

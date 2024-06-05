@@ -1,13 +1,13 @@
 package Main;
 
 import QuanLyDiem.DAO.MyConnect;
-import QuanLyDiem.GUI.LoadingDialog;
-import QuanLyDiem.GUI.LoginFrame;
+import QuanLyDiem.GUI.DialogLoading;
+import QuanLyDiem.GUI.FrameLogin;
 
 public class Main {
 
     public static void main(String[] args) {
-        LoadingDialog loadingDialog = new LoadingDialog();
+        DialogLoading loadingDialog = new DialogLoading();
         loadingDialog.setVisible(true);
 
         changLNF("Nimbus");
@@ -16,7 +16,7 @@ public class Main {
 
         if (!loadingDialog.hasError()) {
             loadingDialog.setVisible(false);
-            LoginFrame login = new LoginFrame();
+            FrameLogin login = new FrameLogin();
             login.showWindow();
         } else {
             loadingDialog.setVisible(true);
